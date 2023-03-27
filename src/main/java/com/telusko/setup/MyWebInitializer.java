@@ -1,4 +1,4 @@
-package com.telusko;
+package com.telusko.setup;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 //this file is instead of web.xml
@@ -14,7 +14,7 @@ public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletI
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] {TeluskoConfig.class};
+		return new Class[] {AppConfig.class};
 	}
 
 	@Override
