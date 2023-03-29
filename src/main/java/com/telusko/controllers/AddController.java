@@ -10,11 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AddController {
-	@RequestMapping("/addTwoNumbers")
+	@RequestMapping("/add")
 	public ModelAndView add(@RequestParam("t1") int i, @RequestParam("t2") int j) {
 		int k = i + j;
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("addResult");
+		mv.setViewName("addResult.jsp");
 		mv.addObject("result", k);
 		return mv;
 
