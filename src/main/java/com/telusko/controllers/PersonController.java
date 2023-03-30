@@ -21,14 +21,14 @@ public class PersonController {
 	
 	@RequestMapping(value = "/person", method = RequestMethod.GET)
 	public String showForm(Model model) {
-	    Person person = new Person();
+	    PersonForm person = new PersonForm();
 	    model.addAttribute("person", person);
 	    List<String> countries = Arrays.asList("USA", "Canada", "Mexico", "Brazil", "Argentina");
 	    model.addAttribute("countries", countries);
 	    return "person.jsp";
 	}
 	@RequestMapping(value = "/person", method = RequestMethod.POST)
-	public String submit(@ModelAttribute("person") Person person, BindingResult result, Model model) {
+	public String submit(@ModelAttribute("person") PersonForm person, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "person.jsp";
 		}

@@ -18,6 +18,9 @@
             <form:options items="${countries}" />
         </form:select>
         <br>
+        <label>Age:</label>
+        <form:input path="age" />
+        <br>
         <button type="submit">Submit</button>
     </form:form>
 </body>
