@@ -2,6 +2,8 @@ package com.telusko.forms;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class GroceryForm {
 	private String name;
 	private String email;
@@ -11,7 +13,10 @@ public class GroceryForm {
 	private String selectedCategory;
 	private int abweichendeMonate;
 	private String garantieOption;
-
+	
+	
+  private List<MultipartFile> files;
+  private List<String> filePaths;
 	public String getEmail() {
 		return email;
 	}
@@ -74,6 +79,22 @@ public class GroceryForm {
 
   public void setGarantieOption(String garantieOption) {
     this.garantieOption = garantieOption;
+  }
+
+  public List<MultipartFile> getFiles() {
+    return files;
+  }
+
+  public void setFiles(List<MultipartFile> files) {
+    this.files = files;
+  }
+
+  public List<String> getFilePaths() {
+    return filePaths;
+  }
+
+  public void setFilePaths(List<String> filePaths) {
+    this.filePaths = filePaths;
   }
 
 

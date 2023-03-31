@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>Grocery Items</h1>
-  <form:form action="GroceryItems.do" modelAttribute="groceryForm" method="post">
+  <form:form action="GroceryItems.do" modelAttribute="groceryForm" method="post" enctype="multipart/form-data">
     <label>Name:</label>
     <form:input path="name" />
     <br>
@@ -26,16 +26,22 @@
       <br>
     </c:forEach>
     <br>
-      <c:if test="${groceryForm.selectedCategory == 'member'}">
-    <p>Welcome, Member user!</p>
-    <a href="/member">Member panel</a>
-  </c:if>
-  <br>
+    <c:if test="${groceryForm.selectedCategory == 'member'}">
+      <p>Welcome, Member user!</p>
+      <a href="/member">Member panel</a>
+    </c:if>
+    <br>
     <form:radiobutton path="garantieOption" value="Gesetzlich" label="Gesetzliche Gewährleistung" />
     <br>
     <form:radiobutton path="garantieOption" value="Abweichend" label="Abweichende Gewährleistung/Garantie: min." />
     <input type="number" name="abweichendeMonate" min="1" max="12" step="1" />
     <label>Monate</label>
+    <br>
+
+
+    <!-- Upload Files-->
+    <input type="file" name="files" multiple />
+     <!-- Submit Files-->
     <br>
     <input type="submit" name="action" value="submitForm" />
     <br>
