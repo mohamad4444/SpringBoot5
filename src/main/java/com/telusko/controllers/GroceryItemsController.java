@@ -26,7 +26,7 @@ public class GroceryItemsController {
 	@Autowired
 	private HttpSession session;
 
-	@ModelAttribute("GroceryForm")
+	@ModelAttribute("groceryForm")
 	public GroceryForm createGroceryForm() {
 		logger.info("creating new GroceryForm");
 		GroceryForm form=new GroceryForm();
@@ -38,7 +38,7 @@ public class GroceryItemsController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String default_method(@ModelAttribute("GroceryForm") GroceryForm form, HttpServletRequest request) {
+	public String default_method(@ModelAttribute("groceryForm") GroceryForm form, HttpServletRequest request) {
 		String param=request.getParameter("test");
 		logger.info("returning GroceryItems.jsp");
 		return "GroceryItems.jsp";
@@ -51,7 +51,7 @@ public class GroceryItemsController {
 //        return "showGroceryItems.jsp";
 //    }
 	@RequestMapping(params = "action=submitForm")
-	public String submitForm(@ModelAttribute("GroceryForm") GroceryForm form) {
+	public String submitForm(@ModelAttribute("groceryForm") GroceryForm form) {
 		logger.info("form submitted");
 		return "showGroceryItems.jsp";
 	}

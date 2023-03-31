@@ -9,6 +9,8 @@ public class GroceryForm {
 	private String category;
 	private List<String> categoryOptions;
 	private String selectedCategory;
+	private int abweichendeMonate;
+	private String garantieOption;
 
 	public String getEmail() {
 		return email;
@@ -57,6 +59,22 @@ public class GroceryForm {
 	public void setSelectedCategory(String selectedCategory) {
 		this.selectedCategory = selectedCategory;
 	}
+
+  public int getAbweichendeMonate() {
+    return abweichendeMonate;
+  }
+
+  public void setAbweichendeMonate(int abweichendeMonate) {
+    this.abweichendeMonate = abweichendeMonate;
+  }
+
+  public String getGarantieOption() {
+    return garantieOption;
+  }
+
+  public void setGarantieOption(String garantieOption) {
+    this.garantieOption = garantieOption;
+  }
 
 
 
