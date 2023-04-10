@@ -52,7 +52,7 @@ public class GroceryItemsController {
   public String default_method(@ModelAttribute("groceryForm") GroceryForm form, HttpServletRequest request) {
     String param = request.getParameter("test");
     logger.info("returning GroceryItems.jsp");
-    return "GroceryItems.jsp";
+    return "GroceryItems2.jsp";
   }
 
   // @GetMapping
