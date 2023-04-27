@@ -25,20 +25,26 @@
 			<label> </label>
       <br>
     </c:forEach>
-    <br>
+  
     <c:if test="${groceryForm.selectedCategory == 'member'}">
+      <br>
       <p>Welcome, Member user!</p>
       <a href="/member">Member panel</a>
+      <br>
     </c:if>
-    <br>
+
     <form:radiobutton path="garantieOption" value="Gesetzlich" label="Gesetzliche Gewährleistung" />
     <br>
     <form:radiobutton path="garantieOption" value="Abweichend" label="Abweichende Gewährleistung/Garantie: min." />
     <input type="number" name="abweichendeMonate" value=0 min="0" max="12" step="1" />
     <label>Monate</label>
+      <br>
     <input type="file" name="file" id="file">
-     <!-- Submit Files-->
+    <!-- Submit Files-->
     <br>
+    <form:textarea path="textArea" rows="3" cols="30" value="${textArea}" />
+
+
     <input type="submit" name="action" value="submitForm" />
     <br>
     hi

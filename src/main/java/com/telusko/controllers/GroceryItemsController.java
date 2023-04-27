@@ -45,6 +45,7 @@ public class GroceryItemsController {
     categories.add("member");
     categories.add("tabac");
     form.setCategoryOptions(categories);
+    form.setTextArea("line1\nline2\nline3");
     return form;
   }
 

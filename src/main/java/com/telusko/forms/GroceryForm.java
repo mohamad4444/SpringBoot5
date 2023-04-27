@@ -13,6 +13,7 @@ public class GroceryForm {
 	private String selectedCategory;
 	private int abweichendeMonate;
 	private String garantieOption;
+	private String textArea;
 	
 	
   private List<MultipartFile> files;
@@ -95,6 +96,14 @@ public class GroceryForm {
 
   public void setFilePaths(List<String> filePaths) {
     this.filePaths = filePaths;
+  }
+
+  public String getTextArea() {
+    return textArea;
+  }
+
+  public void setTextArea(String textArea) {
+    this.textArea = textArea;
   }
 
 
