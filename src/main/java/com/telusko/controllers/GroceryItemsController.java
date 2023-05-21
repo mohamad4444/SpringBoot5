@@ -3,8 +3,6 @@ package com.telusko.controllers;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +29,6 @@ import java.util.ArrayList;
 @SessionAttributes("GroceryForm") // GroceryFrom class
 @RequestMapping("/GroceryItems.do") // site to call for this class to be called
 public class GroceryItemsController {
-  private static final Logger logger = LogManager.getLogger(GroceryItemsController.class);
   @Autowired
   private HttpServletRequest request;
   @Autowired
@@ -39,7 +36,6 @@ public class GroceryItemsController {
 
   @ModelAttribute("groceryForm")
   public GroceryForm createGroceryForm() {
-    logger.info("creating new GroceryForm");
     GroceryForm form = new GroceryForm();
     LinkedList<String> categories = new LinkedList<String>();
     categories.add("member");
@@ -52,7 +48,6 @@ public class GroceryItemsController {
   @RequestMapping(method = RequestMethod.GET)
   public String default_method(@ModelAttribute("groceryForm") GroceryForm form, HttpServletRequest request) {
     String param = request.getParameter("test");
-    logger.info("returning GroceryItems.jsp");
     return "GroceryItems2.jsp";
   }
 
@@ -64,7 +59,6 @@ public class GroceryItemsController {
   // }
   @RequestMapping(params = "action=submitForm")
   public String submitForm(@ModelAttribute("groceryForm") GroceryForm form) {
-    logger.info("form submitted");
     return "showGroceryItems.jsp";
   }
 
@@ -88,16 +82,12 @@ public class GroceryItemsController {
 
         // Update the model with the paths to the uploaded files
         groceryForm.setFilePaths(fileNames);
-        logger.info("Files uploaded successfully");
       } catch (IOException e) {
-        logger.info( "Error uploading files");
         e.printStackTrace();
       }
     } else {
-      logger.info( "Please select one or more files to upload");
     }
 
- 
     return "showGroceryItems.jsp";
   }
 
