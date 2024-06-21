@@ -1,7 +1,8 @@
 # Version
 
+
 Dynamic web module must be version 4,
-java version can be 19.
+java version can be 17.
 Tomcat must be version 9.0
 
 ## Spring 4:
@@ -26,14 +27,16 @@ Springboot 2
 
 -Java 8 and Java EE 7
 
-## Spring version 6 works
+## Spring version 6 totally migrated to Jakarta EE and no longer works with javax
 
-- web.xml and config.xml still work, tomcat 9 also works
+- web.xml and config.xml still work
+- Requires Tomcat 10
+- Requires Jakarta EE instead of Javax
 - for sprinboot 3
 - Java 17
 - Compatible with latest web servers: Tomcat 10.1, Jetty 11, Undertow 2.3.
 -Spring 6: This version moved to Jakarta EE 9 and its respective library dependencies
-## Tomcat 9
+## Tomcat 9 Only works with Spring Version 5
 - uses javax
 - Tomcat 9 supports Servlet API version 4.0 and JSP API version 2.3
 -  Tomcat 9 requires Java 8 or later
