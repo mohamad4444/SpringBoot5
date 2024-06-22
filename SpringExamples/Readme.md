@@ -4,7 +4,6 @@ Spring Boot 5
 Dynamic web module must be version 4,
 java version can be 17.
 Tomcat must be version 9.0
-deployed in localhost:8080/myapp2
 
 Solving Problems
 
