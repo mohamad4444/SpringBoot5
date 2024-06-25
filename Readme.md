@@ -133,5 +133,3 @@ Springboot 2
 
 For copyright reasons the Servlet 5.0 API (implemented by Tomcat 10) and the Servlet 4.0 API (implemented by Tomcat 9) are incompatible: the API namespace changed from javax._ to jakarta._. This can manifest in many ways:
 
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
